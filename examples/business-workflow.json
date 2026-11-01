@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "kind": "workflow",
+  "title": "方案审核",
+  "layout": {
+    "mode": "authored",
+    "width": 800,
+    "height": 400
+  },
+  "nodes": [
+    {
+      "id": "draft",
+      "label": "编写方案",
+      "role": "human",
+      "position": [
+        50,
+        130
+      ],
+      "summary": [
+        "准备待审核内容"
+      ]
+    },
+    {
+      "id": "review",
+      "label": "审核方案",
+      "role": "decision",
+      "position": [
+        460,
+        130
+      ],
+      "summary": [
+        "核对内容与验收条件"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "draft",
+      "target": "review",
+      "label": "提交",
+      "confidence": "manual",
+      "points": [
+        [
+          300,
+          184
+        ],
+        [
+          460,
+          184
+        ]
+      ],
+      "label_position": [
+        380,
+        172
+      ]
+    }
+  ]
+}
